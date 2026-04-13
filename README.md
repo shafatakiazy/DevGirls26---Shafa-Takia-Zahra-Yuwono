@@ -136,8 +136,3 @@ Tidak diperlukan instalasi apapun. Cukup buka file `index.html` di browser.
 | Data tidak muncul di browser lain | localStorage bersifat lokal — tidak tersinkronisasi antar perangkat |
 | Tugas lama tidak muncul | Cek filter status, pastikan pilih **"Semua status"** |
 
----
-
-## 📄 Lisensi
-
-Proyek ini dibuat untuk keperluan belajar. Bebas digunakan dan dimodifikasi.
