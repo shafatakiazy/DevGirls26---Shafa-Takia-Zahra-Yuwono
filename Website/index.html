@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Tracker</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app" id="app">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <h1>📚 Study Tracker</h1>
+          <p>Kelola tugas belajarmu hari ini</p>
+        </div>
+        <button class="btn-dark" id="dark-btn" onclick="toggleDark()">🌙 Dark Mode</button>
+      </header>
+
+      <!-- Ringkasan Produktivitas -->
+      <section class="stats" aria-label="Ringkasan produktivitas">
+        <div class="stat">
+          <div class="stat-num" id="s-total">0</div>
+          <div class="stat-lbl">Total tugas hari ini</div>
+        </div>
+        <div class="stat done">
+          <div class="stat-num" id="s-done">0</div>
+          <div class="stat-lbl">Selesai</div>
+        </div>
+        <div class="stat pending">
+          <div class="stat-num" id="s-pending">0</div>
+          <div class="stat-lbl">Belum selesai</div>
+        </div>
+      </section>
+
+      <!-- Form Tambah Tugas -->
+      <section class="form-card" aria-label="Form tambah tugas">
+        <h2>Tambah Tugas Baru</h2>
+
+        <div class="form-group full">
+          <label for="inp-title">Nama tugas <span class="required">*</span></label>
+          <input type="text" id="inp-title" placeholder="Contoh: Kerjakan laporan praktikum..." />
+        </div>
+
+        <div class="form-group full">
+          <label for="inp-desc">Deskripsi</label>
+          <textarea id="inp-desc" placeholder="Deskripsi singkat tugas..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inp-cat">Kategori</label>
+            <select id="inp-cat">
+              <option value="">-- Pilih kategori --</option>
+              <option>Mata Kuliah</option>
+              <option>Praktikum</option>
+              <option>Proyek</option>
+              <option>Ujian</option>
+              <option>Membaca</option>
+              <option>Lainnya</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="inp-subject">Mata kuliah</label>
+            <input type="text" id="inp-subject" placeholder="Contoh: Algoritma..." />
+          </div>
+
+          <div class="form-group">
+            <label for="inp-deadline">Deadline</label>
+            <input type="date" id="inp-deadline" />
+          </div>
+        </div>
+
+        <button class="btn-add" id="btn-add" onclick="handleAddTask()">+ Tambah Tugas</button>
+      </section>
+
+      <!-- Filter & Pencarian -->
+      <section class="controls" aria-label="Filter dan pencarian">
+        <input type="text" id="search" placeholder="🔍 Cari tugas..." />
+        <select id="filter-status">
+          <option value="">Semua status</option>
+          <option value="pending">Belum selesai</option>
+          <option value="done">Selesai</option>
+        </select>
+        <select id="filter-cat">
+          <option value="">Semua kategori</option>
+          <option>Mata Kuliah</option>
+          <option>Praktikum</option>
+          <option>Proyek</option>
+          <option>Ujian</option>
+          <option>Membaca</option>
+          <option>Lainnya</option>
+        </select>
+      </section>
+
+      <!-- Daftar Tugas -->
+      <main class="task-list" id="task-list" aria-label="Daftar tugas"></main>
+
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
