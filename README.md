@@ -21,7 +21,7 @@ Semua data tersimpan secara otomatis di **localStorage** browser sehingga tidak 
 ## Screenshot
 
 ### Tampilan Utama — Form & Statistik
-![Tampilan Utama](screenshot_1.png))
+![Tampilan Utama](Screenshoot/Screenshot 2026-04-13 162852.png))
 
 ### Tampilan Daftar Tugas
 ![Daftar Tugas](screenshot_2.png)
